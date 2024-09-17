@@ -1,0 +1,33 @@
+\documentclass{gmcmthesis}
+\input{data/preamble}
+
+\title{中国研究生数学建模竞赛论文标题}
+\tenure{二十一} %第x届
+\teamid{No.00000001} %参赛队号
+\schoolname{国防科技大学}%学校名称
+\membera{队员A} %队员A
+\memberb{队员B} %队员B
+\memberc{队员C} %队员C
+
+\begin{document}
+\maketitle
+% 目录
+% \tableofcontents
+% \newpage
+% 摘要
+\input{data/abstract}
+% 正文
+\input{data/sec1}
+\input{data/sec2}
+
+% 参考文献
+\newpage
+\bibliographystyle{refs/gmcm}
+\bibliography{refs/ref.bib}
+% 附录
+\newpage
+\begin{appendices}
+\input{data/appendix1}
+\input{data/appendix2}
+\end{appendices}
+\end{document}

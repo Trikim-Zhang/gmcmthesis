@@ -1,0 +1,37 @@
+\usepackage{pstricks}
+\usepackage{tikz}
+\usepackage{zhlipsum}
+\newcommand{\sol}[1]{
+    \colorbox{cyan!50}{[#1]}
+}
+\usepackage{silence}
+\WarningsOff
+% 算法环境
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\renewcommand{\algorithmcfname}{算法}
+\AtBeginEnvironment{algorithm}{
+    \SetAlgoLined
+    \SetKwInOut{Input}{输入}
+    \SetKwInOut{Output}{输出}
+    \DontPrintSemicolon 
+}
+\usepackage{csvsimple}
+% 设置代码环境
+\usepackage{listings}
+\lstset{
+    basicstyle = \small\ttfamily,           % 基本样式 + 小号字体
+    rulesepcolor= \color{gray},             % 代码块边框颜色
+    breaklines = true,                  % 代码过长则换行
+    numbers = left,                     % 行号在左侧显示
+    numberstyle = \small,               % 行号字体
+    keywordstyle = \bfseries\color{blue},            % 关键字颜色
+    % commentstyle =\color{green!100},        % 注释颜色
+    commentstyle=\color{gray!50!black!50},
+    stringstyle = \color{red!100},          % 字符串颜色
+    frame = shadowbox,                  % 用（带影子效果）方框框住代码块
+    showspaces = false,                 % 不显示空格
+    columns = fixed,                    % 字间距固定
+    %escapeinside={<@}{@>}              % 特殊自定分隔符：<@可以自己加颜色@>
+    morekeywords = {as},                % 自加新的关键字（必须前后都是空格）
+    deletendkeywords = {eps}        % 删除内定关键字；删除错误标记的关键字用deletekeywords删！
+}
